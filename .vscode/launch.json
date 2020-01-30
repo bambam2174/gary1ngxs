@@ -1,0 +1,76 @@
+{
+    // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+    // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+    // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "Launch Chrome",
+        "preLaunchTask": "npm: start",
+        "url": "http://localhost:8080",
+        "webRoot": "${workspaceFolder}",
+        "sourceMapPathOverrides": {
+          "webpack:/*": "${webRoot}/*",
+          "/./*": "${webRoot}/*",
+          "/src/*": "${webRoot}/*",
+          "/*": "*",
+          "/./~/*": "${webRoot}/node_modules/*"
+        }
+      },
+      {
+        "name": "ng serve",
+        "type": "chrome",
+        "request": "launch",
+        "preLaunchTask": "npm: start",
+        "url": "http://localhost:4211/#",
+        "webRoot": "${workspaceFolder}",
+        "sourceMapPathOverrides": {
+          "webpack:/*": "${webRoot}/*",
+          "/./*": "${webRoot}/*",
+          "/src/*": "${webRoot}/*",
+          "/*": "*",
+          "/./~/*": "${webRoot}/node_modules/*"
+        }
+      },
+      {
+        "name": "ng serve 4200",
+        "type": "chrome",
+        "request": "launch",
+        "preLaunchTask": "npm: start",
+        "url": "http://localhost:4200/#",
+        "webRoot": "${workspaceFolder}",
+        "sourceMapPathOverrides": {
+          "webpack:/*": "${webRoot}/*",
+          "/./*": "${webRoot}/*",
+          "/src/*": "${webRoot}/*",
+          "/*": "*",
+          "/./~/*": "${webRoot}/node_modules/*"
+        }
+      },
+      {
+        "name": "ng test",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:9899/debug.html",
+        "webRoot": "${workspaceFolder}",
+        "sourceMaps": true,
+        "sourceMapPathOverrides": {
+          "webpack:/*": "${webRoot}/*",
+          "/./*": "${webRoot}/*",
+          "/src/*": "${webRoot}/*",
+          "/*": "*",
+          "/./~/*": "${webRoot}/node_modules/*"
+        }
+      },
+      {
+        "name": "ng e2e",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/node_modules/protractor/bin/protractor",
+        "protocol": "inspector",
+        "args": ["${workspaceFolder}/e2e/protractor.conf.js"]
+      }
+    ]
+}
