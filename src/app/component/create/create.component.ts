@@ -16,6 +16,9 @@ export class CreateComponent implements OnInit {
   }
 
   addTutorial(name: string, url: string) {
+    if (!name.startsWith('http')) {
+      name = 'https://' + name;
+    }
     this.store.dispatch(new AddTutorial({ name: name, url: url }));
   }
 
