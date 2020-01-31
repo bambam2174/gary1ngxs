@@ -67,7 +67,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "gary1ngxs:build"
+            "browserTarget": "gary1ngxs:build",
+            "port": 4211
           },
           "configurations": {
             "production": {
